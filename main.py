@@ -2,41 +2,57 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext
+import random
 
 def initialiser_graphe():
     G = nx.Graph()
-    liaisons = [
-        ('Serveur A', 'Serveur B', 4), 
-        ('Serveur A', 'Serveur C', 2), 
-        ('Serveur B', 'Serveur D', 10), 
-        ('Serveur B', 'Serveur E', 6),
-        ('Serveur C', 'Serveur F', 15),
-        ('Serveur D', 'Serveur G', 8),
-        ('Serveur D', 'Serveur H', 7),
-        ('Serveur E', 'Serveur I', 3),
-        ('Serveur F', 'Serveur J', 9),
-        ('Serveur G', 'Serveur K', 5),
-        ('Serveur H', 'Serveur L', 11),
-        ('Serveur I', 'Serveur M', 4),
-        ('Serveur J', 'Serveur N', 6),
-        ('Serveur K', 'Serveur O', 2),
-        ('Serveur L', 'Serveur P', 12),
-        ('Serveur M', 'Serveur Q', 7),
-        ('Serveur N', 'Serveur R', 5),
-        ('Serveur O', 'Serveur S', 3),
-        ('Serveur P', 'Serveur T', 8),
-        ('Serveur E', 'Serveur H', 5),
-        ('Serveur G', 'Serveur J', 6),
-        ('Serveur I', 'Serveur L', 9),
-        ('Serveur K', 'Serveur N', 4),
-        ('Serveur M', 'Serveur P', 7),
-        ('Serveur Q', 'Serveur R', 3),
-        ('Serveur S', 'Serveur T', 5),
-        ('Serveur B', 'Serveur F', 13),
-        ('Serveur D', 'Serveur I', 8),
-        ('Serveur H', 'Serveur M', 6),
-        ('Serveur J', 'Serveur O', 9),
-    ]
+    test = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+            'J', 'K', 'L', 'M', 'N', 'O', 'P']
+    liaisons = []
+    for t1 in test:
+        chance = random.random()
+        if chance < 0.9:
+            continue
+
+        for t2 in test:
+            if t2 == t1: continue
+
+            poids = random.randint(0, 20)
+            liaisons.append(
+                (f'Serveur {t1}', f'Serveur {t2}', poids)
+            )
+    # liaisons = [
+    #     ('Serveur A', 'Serveur B', 4), 
+    #     ('Serveur A', 'Serveur C', 2), 
+    #     ('Serveur B', 'Serveur D', 10), 
+    #     ('Serveur B', 'Serveur E', 6),
+    #     ('Serveur C', 'Serveur F', 15),
+    #     ('Serveur D', 'Serveur G', 8),
+    #     ('Serveur D', 'Serveur H', 7),
+    #     ('Serveur E', 'Serveur I', 3),
+    #     ('Serveur F', 'Serveur J', 9),
+    #     ('Serveur G', 'Serveur K', 5),
+    #     ('Serveur H', 'Serveur L', 11),
+    #     ('Serveur I', 'Serveur M', 4),
+    #     ('Serveur J', 'Serveur N', 6),
+    #     ('Serveur K', 'Serveur O', 2),
+    #     ('Serveur L', 'Serveur P', 12),
+    #     ('Serveur M', 'Serveur Q', 7),
+    #     ('Serveur N', 'Serveur R', 5),
+    #     ('Serveur O', 'Serveur S', 3),
+    #     ('Serveur P', 'Serveur T', 8),
+    #     ('Serveur E', 'Serveur H', 5),
+    #     ('Serveur G', 'Serveur J', 6),
+    #     ('Serveur I', 'Serveur L', 9),
+    #     ('Serveur K', 'Serveur N', 4),
+    #     ('Serveur M', 'Serveur P', 7),
+    #     ('Serveur Q', 'Serveur R', 3),
+    #     ('Serveur S', 'Serveur T', 5),
+    #     ('Serveur B', 'Serveur F', 13),
+    #     ('Serveur D', 'Serveur I', 8),
+    #     ('Serveur H', 'Serveur M', 6),
+    #     ('Serveur J', 'Serveur O', 9),
+    # ]
     G.add_weighted_edges_from(liaisons)
     return G
 
