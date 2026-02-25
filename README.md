@@ -66,8 +66,3 @@ La fenêtre s'ouvre avec 5 onglets pour:
 ### Configuration du Réseau
 - **Nombre de noeuds**: 20
 - **Nombre de liaisons**: 30
-
-### Noeuds les Plus Connectés
-- Serveur B: 4 connexions
-- Serveur D: 5 connexions
-- Serveur G: 4 connexions
