@@ -1,5 +1,12 @@
 # Systeme de Routage IP - Algorithme de Dijkstra
 
+## Notions du cours
+- Algorithme de recherche Dijkstra
+- Graphes non orientés
+- Connexité
+- NetworkX
+- MatPlotLib
+
 ## Auteurs en S2B1
 - Leo Krakovinsky
 - Brian Lecoq
