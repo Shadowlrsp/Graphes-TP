@@ -190,10 +190,10 @@ def menu_interactif(G):
         elif choix == '4':
             afficher_distances_depuis_serveur(G)
         elif choix == '5':
-            print("\nAu revoir\n")
+            print("\nAu revoirr\n")
             break
         else:
-            print("Option invalide. Réessayez.")
+            print("Option invalide. Réessayez")
 
 class ApplicationGUI:
     
