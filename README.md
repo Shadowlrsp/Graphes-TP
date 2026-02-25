@@ -9,7 +9,7 @@
 Ce projet implémente un **système de routage IP basé sur l'algorithme de Dijkstra** pour trouver le chemin le plus court entre deux serveurs dans un réseau informatique.
 
 L'application simule un réseau composé de 20 serveurs (A à T) reliés par 30 liaisons pondérées représentant des latences de communication. L'objectif principal est de calculer le chemin optimal (chemin de latence minimale) entre n'importe quels deux serveurs du réseau.
-
+ 
 ## Technologies Utilisées
 
 ### Bibliothèques Python Principales:
